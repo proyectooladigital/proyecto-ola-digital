@@ -198,7 +198,7 @@
 
 <section class="video-section">
   <div class="video-wrapper">
-    <video autoplay muted loop playsinline style="max-width: 280px; margin: 0 auto; display: block;">
+    <video autoplay muted loop playsinline>
       <source src="OlaMov.mp4" type="video/mp4">
     </video>
   </div>
@@ -351,10 +351,12 @@
     <span>✉</span> proyectooladigital@gmail.com
   </a>
 
-  <div class="contact-form">
-    <input type="text" placeholder="Nombre completo">
-    <input type="email" placeholder="Correo electrónico">
-    <select>
+  <form class="contact-form" action="https://formspree.io/f/mjglwkjg" method="POST">
+    <input type="hidden" name="_next" value="https://proyectooladigital.github.io/proyecto-ola-digital/gracias.html">
+    <input type="hidden" name="_subject" value="Nuevo mensaje desde Proyecto Ola Digital">
+    <input type="text" name="nombre" placeholder="Nombre completo" required>
+    <input type="email" name="email" placeholder="Correo electrónico" required>
+    <select name="consulta">
       <option value="" disabled selected>¿Cómo podemos ayudarte?</option>
       <option>Quiero recuperar mi equipo</option>
       <option>Quiero tomar el curso</option>
@@ -362,9 +364,9 @@
       <option>Consultoría técnica para mi empresa</option>
       <option>Otra consulta</option>
     </select>
-    <textarea placeholder="Cuéntanos más sobre lo que necesitas..."></textarea>
-    <button type="button" onclick="window.location.href='mailto:proyectooladigital@gmail.com'">Enviar mensaje</button>
-  </div>
+    <textarea name="mensaje" placeholder="Cuéntanos más sobre lo que necesitas..." required></textarea>
+    <button type="submit">Enviar mensaje</button>
+  </form>
   <p class="contact-note">También puedes escribirnos directamente a <a href="mailto:proyectooladigital@gmail.com">proyectooladigital@gmail.com</a></p>
 </section>
 
