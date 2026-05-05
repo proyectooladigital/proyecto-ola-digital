@@ -39,7 +39,7 @@
   .hero::after { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle at 20% 50%, rgba(58,191,191,0.06) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(26,94,143,0.08) 0%, transparent 40%); pointer-events: none; }
 
   .logo-hero { margin: 0 auto 1.8rem; animation: logoEntrada 1s cubic-bezier(0.16,1,0.3,1) both; position: relative; z-index: 1; }
-  .logo-hero img { width: 150px; height: auto; filter: drop-shadow(0 8px 32px rgba(58,191,191,0.3)); }
+  .logo-hero img { width: 75px; height: auto; filter: drop-shadow(0 8px 32px rgba(58,191,191,0.3)); }
   @keyframes logoEntrada { from { opacity: 0; transform: scale(0.7) translateY(30px); } to { opacity: 1; transform: scale(1) translateY(0); } }
 
   .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(58,191,191,0.12); border: 1px solid rgba(58,191,191,0.35); color: var(--ola); border-radius: 50px; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 6px 16px; margin-bottom: 1.8rem; animation: fadeUp 0.6s 0.1s ease both; position: relative; z-index: 1; }
@@ -63,7 +63,7 @@
 
   /* VIDEO */
   .video-section { background: var(--oceano); padding: 0 2rem 5rem; display: flex; justify-content: center; }
-  .video-wrapper { width: 100%; max-width: 820px; border-radius: 18px; overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,0.45); background: #000; border: 1px solid rgba(58,191,191,0.2); }
+  .video-wrapper { width: 100%; max-width: 410px; border-radius: 18px; overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,0.45); background: #000; border: 1px solid rgba(58,191,191,0.2); }
   .video-wrapper video { display: block; width: 100%; }
 
   /* METODOLOGIA */
@@ -351,9 +351,7 @@
     <span>✉</span> proyectooladigital@gmail.com
   </a>
 
-  <form class="contact-form" action="https://formspree.io/f/mjglwkjg" method="POST">
-    <input type="hidden" name="_next" value="https://proyectooladigital.github.io/proyecto-ola-digital/gracias.html">
-    <input type="hidden" name="_subject" value="Nuevo mensaje desde Proyecto Ola Digital">
+  <form class="contact-form" id="contactForm">
     <input type="text" name="nombre" placeholder="Nombre completo" required>
     <input type="email" name="email" placeholder="Correo electrónico" required>
     <select name="consulta">
@@ -365,9 +363,43 @@
       <option>Otra consulta</option>
     </select>
     <textarea name="mensaje" placeholder="Cuéntanos más sobre lo que necesitas..." required></textarea>
-    <button type="submit">Enviar mensaje</button>
+    <button type="submit" id="submitBtn">Enviar mensaje</button>
   </form>
+
+  <div id="formSuccess" style="display:none; margin-top:2rem; background:rgba(58,191,191,0.1); border:1px solid rgba(58,191,191,0.3); border-radius:16px; padding:2rem; text-align:center;">
+    <div style="font-size:2rem; margin-bottom:0.8rem;">✓</div>
+    <div style="font-family:'Bebas Neue',sans-serif; font-size:1.5rem; color:var(--oceano); letter-spacing:0.05em; margin-bottom:0.5rem;">Mensaje recibido</div>
+    <p style="font-size:0.9rem; font-weight:300; color:var(--roca); line-height:1.7;">Gracias por escribirnos. Te responderemos a la brevedad en el correo que nos indicaste.</p>
+  </div>
+
   <p class="contact-note">También puedes escribirnos directamente a <a href="mailto:proyectooladigital@gmail.com">proyectooladigital@gmail.com</a></p>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const btn = document.getElementById('submitBtn');
+      btn.textContent = 'Enviando...';
+      btn.disabled = true;
+      const data = new FormData(this);
+      try {
+        const res = await fetch('https://formspree.io/f/mjglwkjg', {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          document.getElementById('contactForm').style.display = 'none';
+          document.getElementById('formSuccess').style.display = 'block';
+        } else {
+          btn.textContent = 'Error, intenta de nuevo';
+          btn.disabled = false;
+        }
+      } catch(err) {
+        btn.textContent = 'Error de conexión';
+        btn.disabled = false;
+      }
+    });
+  </script>
 </section>
 
 <footer>
