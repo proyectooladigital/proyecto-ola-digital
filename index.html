@@ -4,6 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Proyecto Ola Digital</title>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GK04D527HQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-GK04D527HQ");
+</script>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -61,12 +69,10 @@
   .btn-ghost { border: 1.5px solid rgba(255,255,255,0.18); color: rgba(255,255,255,0.65); padding: 14px 34px; border-radius: 50px; font-family: 'Bebas Neue', sans-serif; font-size: 1.05rem; letter-spacing: 0.1em; text-decoration: none; transition: background 0.2s, color 0.2s, border-color 0.2s; display: inline-block; }
   .btn-ghost:hover { background: rgba(255,255,255,0.07); color: #fff; border-color: rgba(255,255,255,0.35); }
 
-  /* VIDEO */
   .video-section { background: var(--oceano); padding: 0 2rem 5rem; display: flex; justify-content: center; }
   .video-wrapper { width: 100%; max-width: 410px; border-radius: 18px; overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,0.45); background: #000; border: 1px solid rgba(58,191,191,0.2); }
   .video-wrapper video { display: block; width: 100%; }
 
-  /* METODOLOGIA */
   .metodologia { padding: 6rem 2rem; max-width: 960px; margin: 0 auto; }
   .section-label { font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--surfista); font-weight: 400; margin-bottom: 0.5rem; }
   .section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2rem, 5vw, 3rem); color: var(--oceano); letter-spacing: 0.05em; margin-bottom: 0.8rem; line-height: 1.1; }
@@ -82,7 +88,6 @@
   .met-desc { font-size: 0.88rem; color: var(--roca); font-weight: 300; line-height: 1.7; }
   .met-quote { margin-top: 1rem; font-size: 0.82rem; color: var(--marea); font-style: italic; border-left: 2px solid var(--ola); padding-left: 0.8rem; line-height: 1.5; }
 
-  /* SECTORES */
   .sectores-wrap { background: var(--oceano); padding: 5rem 2rem; }
   .sectores-inner { max-width: 960px; margin: 0 auto; }
   .sectores-wrap .section-label { color: var(--ola); }
@@ -101,7 +106,6 @@
   .card-items li::before { content: ''; position: absolute; left: 0; top: 7px; width: 5px; height: 5px; border-radius: 50%; background: var(--ola); }
   .sector-card.orange .card-items li::before { background: var(--surfista); }
 
-  /* PROCESO PREVIEW */
   .proceso-preview { padding: 6rem 2rem; max-width: 960px; margin: 0 auto; }
   .pipeline { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0; margin: 3rem 0; }
   .pipe-step { text-align: center; padding: 1.5rem 0.8rem; position: relative; }
@@ -112,7 +116,6 @@
   .pipe-sub { font-size: 0.72rem; color: var(--roca); margin-top: 0.3rem; font-weight: 300; }
   .proceso-cta { text-align: center; margin-top: 0.5rem; }
 
-  /* PROGRAMA */
   .programa { background: var(--oceano); padding: 5rem 2rem; }
   .programa-inner { max-width: 960px; margin: 0 auto; }
   .programa .section-label { color: var(--ola); }
@@ -123,14 +126,12 @@
   .prog-num { font-family: 'Bebas Neue', sans-serif; font-size: 2.2rem; color: var(--ola); letter-spacing: 0.04em; line-height: 1; }
   .prog-label { font-size: 0.8rem; color: rgba(214,245,245,0.5); font-weight: 300; margin-top: 0.3rem; line-height: 1.4; }
 
-  /* VISION */
   .vision { padding: 5rem 2rem; text-align: center; }
   .vision-inner { max-width: 700px; margin: 0 auto; }
   .vision h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(1.8rem, 4vw, 2.8rem); color: var(--oceano); letter-spacing: 0.05em; margin-bottom: 1.2rem; line-height: 1.15; }
   .vision h2 em { color: var(--ola); font-style: normal; }
   .vision p { color: var(--roca); font-weight: 300; font-size: 1rem; line-height: 1.8; }
 
-  /* CONTACTO */
   .contact { padding: 6rem 2rem; max-width: 640px; margin: 0 auto; text-align: center; }
   .contact .section-title { color: var(--oceano); }
   .contact-desc { font-size: 1rem; color: var(--roca); font-weight: 300; line-height: 1.7; margin-bottom: 2.5rem; }
@@ -147,7 +148,6 @@
   .contact-note a { color: var(--marea); text-decoration: none; }
   .contact-note a:hover { text-decoration: underline; }
 
-  /* FOOTER */
   footer { background: var(--oceano); padding: 1.8rem 2.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; border-top: 1px solid rgba(58,191,191,0.12); }
   .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; letter-spacing: 0.1em; color: var(--ola); text-decoration: none; }
   .footer-logo span { color: rgba(255,255,255,0.55); }
@@ -157,13 +157,9 @@
   .footer-copy { font-size: 0.78rem; color: rgba(214,245,245,0.35); font-weight: 300; }
 
   @keyframes fadeUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
-
   @media (max-width: 640px) {
-    nav { padding: 0 1.2rem; }
-    .nav-links { gap: 1rem; }
-    .nav-links a { font-size: 0.72rem; }
-    .pipeline { grid-template-columns: 1fr 1fr; }
-    .pipe-step::after { display: none; }
+    nav { padding: 0 1.2rem; } .nav-links { gap: 1rem; } .nav-links a { font-size: 0.72rem; }
+    .pipeline { grid-template-columns: 1fr 1fr; } .pipe-step::after { display: none; }
     .contact, .metodologia, .proceso-preview { padding: 4rem 1.2rem; }
     .sectores-wrap, .programa { padding: 4rem 1.2rem; }
     footer { padding: 1.5rem 1.2rem; flex-direction: column; align-items: flex-start; }
@@ -183,9 +179,7 @@
 </nav>
 
 <header class="hero">
-  <div class="logo-hero">
-    <img src="logo.png" alt="Proyecto Ola Digital">
-  </div>
+  <div class="logo-hero"><img src="logo.png" alt="Proyecto Ola Digital"></div>
   <div class="hero-badge">Innovación tecnológica</div>
   <h1><span>Proyecto</span><em>Ola</em> Digital</h1>
   <p class="hero-sub">Transformamos hardware olvidado en oportunidades reales. Enseñamos tecnología <strong>en el lenguaje de cada persona</strong> — desde el emprendedor de barrio hasta la corporación que quiere crecer.</p>
@@ -278,35 +272,13 @@
   <h2 class="section-title">Un proceso completo,<br>de principio a fin</h2>
   <p class="section-desc">No solo reparamos equipos ni solo damos clases. Acompañamos todo el camino: desde el tornillo hasta que el usuario domina su herramienta.</p>
   <div class="pipeline">
-    <div class="pipe-step">
-      <div class="pipe-num">01</div>
-      <div class="pipe-label">Diagnóstico</div>
-      <div class="pipe-sub">¿Vale la pena salvarlo?</div>
-    </div>
-    <div class="pipe-step">
-      <div class="pipe-num">02</div>
-      <div class="pipe-label">Upgrade</div>
-      <div class="pipe-sub">RAM, SSD, OS adecuado</div>
-    </div>
-    <div class="pipe-step">
-      <div class="pipe-num">03</div>
-      <div class="pipe-label">Puesta a Punto</div>
-      <div class="pipe-sub">Optimización y software</div>
-    </div>
-    <div class="pipe-step">
-      <div class="pipe-num">04</div>
-      <div class="pipe-label">Alfabetización</div>
-      <div class="pipe-sub">En el idioma del usuario</div>
-    </div>
-    <div class="pipe-step">
-      <div class="pipe-num">05</div>
-      <div class="pipe-label">Introducción IA</div>
-      <div class="pipe-sub">Herramientas del futuro</div>
-    </div>
+    <div class="pipe-step"><div class="pipe-num">01</div><div class="pipe-label">Diagnóstico</div><div class="pipe-sub">¿Vale la pena salvarlo?</div></div>
+    <div class="pipe-step"><div class="pipe-num">02</div><div class="pipe-label">Upgrade</div><div class="pipe-sub">RAM, SSD, OS adecuado</div></div>
+    <div class="pipe-step"><div class="pipe-num">03</div><div class="pipe-label">Puesta a Punto</div><div class="pipe-sub">Optimización y software</div></div>
+    <div class="pipe-step"><div class="pipe-num">04</div><div class="pipe-label">Alfabetización</div><div class="pipe-sub">En el idioma del usuario</div></div>
+    <div class="pipe-step"><div class="pipe-num">05</div><div class="pipe-label">Introducción IA</div><div class="pipe-sub">Herramientas del futuro</div></div>
   </div>
-  <div class="proceso-cta">
-    <a href="proceso.html" class="btn-primary">Ver el proceso completo</a>
-  </div>
+  <div class="proceso-cta"><a href="proceso.html" class="btn-primary">Ver el proceso completo</a></div>
 </section>
 
 <section class="programa">
@@ -315,22 +287,10 @@
     <h2 class="section-title">Estructura del curso</h2>
     <p class="section-desc">Un programa compacto, intensivo y con impacto medible desde la primera sesión.</p>
     <div class="prog-grid">
-      <div class="prog-stat">
-        <div class="prog-num">12</div>
-        <div class="prog-label">Horas académicas totales</div>
-      </div>
-      <div class="prog-stat">
-        <div class="prog-num">3</div>
-        <div class="prog-label">Sesiones de 4 horas cada una</div>
-      </div>
-      <div class="prog-stat">
-        <div class="prog-num">10+</div>
-        <div class="prog-label">Estaciones de trabajo por cohorte</div>
-      </div>
-      <div class="prog-stat">
-        <div class="prog-num">5</div>
-        <div class="prog-label">Módulos de contenido progresivo</div>
-      </div>
+      <div class="prog-stat"><div class="prog-num">12</div><div class="prog-label">Horas académicas totales</div></div>
+      <div class="prog-stat"><div class="prog-num">3</div><div class="prog-label">Sesiones de 4 horas cada una</div></div>
+      <div class="prog-stat"><div class="prog-num">10+</div><div class="prog-label">Estaciones de trabajo por cohorte</div></div>
+      <div class="prog-stat"><div class="prog-num">5</div><div class="prog-label">Módulos de contenido progresivo</div></div>
     </div>
   </div>
 </section>
@@ -346,11 +306,7 @@
   <p class="section-label">Escríbenos</p>
   <h2 class="section-title">¿Listo para<br>subir la ola?</h2>
   <p class="contact-desc">Seas emprendedor, empresa o institución que quiere implementar el programa — cuéntanos y encontramos la forma de trabajar juntos.</p>
-
-  <a href="mailto:proyectooladigital@gmail.com" class="contact-email">
-    <span>✉</span> proyectooladigital@gmail.com
-  </a>
-
+  <a href="mailto:proyectooladigital@gmail.com" class="contact-email"><span>✉</span> proyectooladigital@gmail.com</a>
   <form class="contact-form" id="contactForm">
     <input type="text" name="nombre" placeholder="Nombre completo" required>
     <input type="email" name="email" placeholder="Correo electrónico" required>
@@ -365,15 +321,12 @@
     <textarea name="mensaje" placeholder="Cuéntanos más sobre lo que necesitas..." required></textarea>
     <button type="submit" id="submitBtn">Enviar mensaje</button>
   </form>
-
   <div id="formSuccess" style="display:none; margin-top:2rem; background:rgba(58,191,191,0.1); border:1px solid rgba(58,191,191,0.3); border-radius:16px; padding:2rem; text-align:center;">
     <div style="font-size:2rem; margin-bottom:0.8rem;">✓</div>
     <div style="font-family:'Bebas Neue',sans-serif; font-size:1.5rem; color:var(--oceano); letter-spacing:0.05em; margin-bottom:0.5rem;">Mensaje recibido</div>
     <p style="font-size:0.9rem; font-weight:300; color:var(--roca); line-height:1.7;">Gracias por escribirnos. Te responderemos a la brevedad en el correo que nos indicaste.</p>
   </div>
-
   <p class="contact-note">También puedes escribirnos directamente a <a href="mailto:proyectooladigital@gmail.com">proyectooladigital@gmail.com</a></p>
-
   <script>
     document.getElementById('contactForm').addEventListener('submit', async function(e) {
       e.preventDefault();
@@ -383,13 +336,13 @@
       const data = new FormData(this);
       try {
         const res = await fetch('https://formspree.io/f/mjglwkjg', {
-          method: 'POST',
-          body: data,
+          method: 'POST', body: data,
           headers: { 'Accept': 'application/json' }
         });
         if (res.ok) {
           document.getElementById('contactForm').style.display = 'none';
           document.getElementById('formSuccess').style.display = 'block';
+          gtag('event', 'form_submit', { event_category: 'contacto', event_label: 'formulario_POD' });
         } else {
           btn.textContent = 'Error, intenta de nuevo';
           btn.disabled = false;
