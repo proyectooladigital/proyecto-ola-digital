@@ -4,151 +4,133 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nuestro Proceso — Proyecto Ola Digital</title>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GK04D527HQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-GK04D527HQ");
+</script>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --oceano: #0B2540;
-    --marea: #1A5E8F;
-    --ola: #3ABFBF;
-    --surfista: #F4833D;
-    --brisa: #D6F5F5;
-    --espuma: #F0F6FA;
-    --roca: #3A4A5C;
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'DM Sans', sans-serif; background: var(--espuma); color: var(--roca); overflow-x: hidden; }
-
-  nav {
-    position: sticky; top: 0; z-index: 100;
-    background: rgba(11,37,64,0.97); backdrop-filter: blur(8px);
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 0 2.5rem; height: 62px;
-  }
-  .nav-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; color: var(--ola); letter-spacing: 0.08em; text-decoration: none; }
-  .nav-logo span { color: #fff; }
-  .nav-links { display: flex; gap: 2rem; align-items: center; }
-  .nav-links a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.04em; text-transform: uppercase; transition: color 0.2s; }
-  .nav-links a:hover { color: var(--ola); }
-  .nav-back { color: rgba(255,255,255,0.5) !important; font-size: 0.78rem !important; border: 1px solid rgba(255,255,255,0.15); padding: 6px 14px; border-radius: 50px; transition: border-color 0.2s, color 0.2s !important; }
-  .nav-back:hover { border-color: var(--ola); color: var(--ola) !important; }
-
-  .page-hero { background: var(--oceano); padding: 5rem 2rem 4rem; text-align: center; position: relative; overflow: hidden; }
-  .page-hero::before { content: ''; position: absolute; bottom: -2px; left: 0; right: 0; height: 70px; background: var(--espuma); clip-path: ellipse(55% 100% at 50% 100%); }
-  .page-hero::after { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle at 15% 60%, rgba(58,191,191,0.07) 0%, transparent 50%), radial-gradient(circle at 85% 30%, rgba(26,94,143,0.09) 0%, transparent 40%); pointer-events: none; }
-  .page-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(58,191,191,0.12); border: 1px solid rgba(58,191,191,0.3); color: var(--ola); border-radius: 50px; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 14px; margin-bottom: 1.5rem; position: relative; z-index: 1; animation: fadeUp 0.5s ease both; }
-  .page-hero h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.8rem, 7vw, 5rem); color: #fff; line-height: 1; letter-spacing: 0.06em; position: relative; z-index: 1; animation: fadeUp 0.6s 0.1s ease both; }
-  .page-hero h1 em { color: var(--ola); font-style: normal; }
-  .page-hero p { margin-top: 1.2rem; font-size: 1.05rem; font-weight: 300; color: rgba(214,245,245,0.7); max-width: 560px; line-height: 1.75; margin-left: auto; margin-right: auto; position: relative; z-index: 1; animation: fadeUp 0.6s 0.2s ease both; }
-
-  .filosofia { max-width: 860px; margin: 0 auto; padding: 5rem 2rem 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
-  .filosofia-text h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(1.8rem, 3.5vw, 2.5rem); color: var(--oceano); letter-spacing: 0.05em; margin-bottom: 1rem; line-height: 1.1; }
-  .filosofia-text h2 em { color: var(--ola); font-style: normal; }
-  .filosofia-text p { font-size: 0.95rem; font-weight: 300; line-height: 1.8; color: var(--roca); margin-bottom: 1rem; }
-  .filosofia-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  .fstat { background: #fff; border-radius: 16px; padding: 1.4rem 1.2rem; border: 1px solid rgba(58,191,191,0.15); text-align: center; }
-  .fstat-num { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: var(--ola); letter-spacing: 0.05em; line-height: 1; }
-  .fstat-label { font-size: 0.78rem; color: var(--roca); font-weight: 300; margin-top: 0.3rem; line-height: 1.3; }
-
-  .etapas { padding: 3rem 2rem 6rem; max-width: 900px; margin: 0 auto; }
-  .etapas-header { text-align: center; margin-bottom: 4rem; }
-  .section-label { font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--surfista); font-weight: 400; margin-bottom: 0.5rem; }
-  .section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2rem, 4.5vw, 2.8rem); color: var(--oceano); letter-spacing: 0.05em; line-height: 1.1; }
-  .section-desc { color: var(--roca); font-weight: 300; line-height: 1.8; font-size: 0.95rem; max-width: 580px; margin-top: 0.6rem; }
-
-  .etapa { display: grid; grid-template-columns: 80px 1fr; gap: 0; margin-bottom: 0; position: relative; }
-  .etapa:not(:last-child) .etapa-line::after { content: ''; position: absolute; left: 39px; top: 80px; bottom: -20px; width: 2px; background: linear-gradient(to bottom, rgba(58,191,191,0.4), rgba(58,191,191,0.05)); }
-  .etapa-line { display: flex; flex-direction: column; align-items: center; padding-top: 4px; position: relative; }
-  .etapa-num { width: 56px; height: 56px; border-radius: 50%; background: var(--oceano); border: 2px solid var(--ola); display: flex; align-items: center; justify-content: center; font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem; color: var(--ola); letter-spacing: 0.05em; flex-shrink: 0; z-index: 1; }
-  .etapa-body { padding: 0 0 3.5rem 1.5rem; }
-  .etapa-tag { display: inline-block; font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--surfista); font-weight: 400; margin-bottom: 0.4rem; }
-  .etapa-title { font-family: 'Bebas Neue', sans-serif; font-size: 1.7rem; color: var(--oceano); letter-spacing: 0.05em; margin-bottom: 0.8rem; line-height: 1; }
-  .etapa-desc { font-size: 0.95rem; font-weight: 300; line-height: 1.8; color: var(--roca); margin-bottom: 1.2rem; }
-  .etapa-items { list-style: none; display: flex; flex-direction: column; gap: 6px; }
-  .etapa-items li { font-size: 0.88rem; font-weight: 300; color: var(--roca); padding-left: 1.2rem; position: relative; line-height: 1.5; }
-  .etapa-items li::before { content: ''; position: absolute; left: 0; top: 8px; width: 6px; height: 6px; border-radius: 50%; background: var(--ola); }
-  .etapa-note { margin-top: 1rem; background: rgba(58,191,191,0.07); border-left: 3px solid var(--ola); border-radius: 0 10px 10px 0; padding: 0.8rem 1rem; font-size: 0.85rem; font-weight: 300; color: var(--roca); font-style: italic; line-height: 1.6; }
-  .etapa-note strong { font-weight: 400; color: var(--marea); font-style: normal; }
-
-  .criterios { background: var(--oceano); padding: 5rem 2rem; }
-  .criterios-inner { max-width: 900px; margin: 0 auto; }
-  .criterios .section-label { color: var(--ola); }
-  .criterios .section-title { color: #fff; margin-bottom: 0.8rem; }
-  .criterios-desc { color: rgba(214,245,245,0.6); font-weight: 300; font-size: 0.95rem; line-height: 1.75; max-width: 580px; margin-bottom: 2.5rem; }
-  .criterios-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
-  .criterio-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(58,191,191,0.2); border-radius: 16px; padding: 1.4rem; }
-  .criterio-icon { font-size: 1.5rem; margin-bottom: 0.8rem; }
-  .criterio-title { font-family: 'Bebas Neue', sans-serif; font-size: 1rem; color: var(--ola); letter-spacing: 0.06em; margin-bottom: 0.5rem; }
-  .criterio-desc { font-size: 0.82rem; color: rgba(214,245,245,0.55); font-weight: 300; line-height: 1.6; }
-  .criterio-card.warn { border-color: rgba(244,131,61,0.3); }
-  .criterio-card.warn .criterio-title { color: var(--surfista); }
-
-  .software { padding: 5rem 2rem; max-width: 900px; margin: 0 auto; }
-  .sw-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 2.5rem; }
-  .sw-card { background: #fff; border-radius: 16px; padding: 1.5rem; border: 1px solid rgba(58,191,191,0.15); }
-  .sw-os { font-family: 'Bebas Neue', sans-serif; font-size: 1rem; color: var(--oceano); letter-spacing: 0.06em; margin-bottom: 0.3rem; }
-  .sw-for { font-size: 0.75rem; color: var(--surfista); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1rem; }
-  .sw-list { list-style: none; display: flex; flex-direction: column; gap: 5px; }
-  .sw-list li { font-size: 0.85rem; font-weight: 300; color: var(--roca); padding-left: 1rem; position: relative; }
-  .sw-list li::before { content: ''; position: absolute; left: 0; top: 7px; width: 5px; height: 5px; border-radius: 50%; background: var(--ola); }
-
-  /* PERFIL PARTICIPANTE */
-  .perfil { background: var(--espuma); padding: 5rem 2rem; }
-  .perfil-inner { max-width: 900px; margin: 0 auto; }
-  .perfil-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 2.5rem; }
-  .perfil-card { background: #fff; border-radius: 16px; padding: 1.5rem; border: 1px solid rgba(58,191,191,0.15); }
-  .perfil-icon { font-size: 1.4rem; margin-bottom: 0.8rem; }
-  .perfil-title { font-family: 'Bebas Neue', sans-serif; font-size: 1rem; color: var(--oceano); letter-spacing: 0.05em; margin-bottom: 0.5rem; }
-  .perfil-desc { font-size: 0.84rem; color: var(--roca); font-weight: 300; line-height: 1.65; }
-  .requisito-box { margin-top: 2rem; background: rgba(58,191,191,0.07); border: 1px solid rgba(58,191,191,0.2); border-radius: 16px; padding: 1.5rem 2rem; }
-  .requisito-box h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; color: var(--oceano); letter-spacing: 0.05em; margin-bottom: 1rem; }
-  .req-list { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px; }
-  .req-list li { font-size: 0.85rem; font-weight: 300; color: var(--roca); padding-left: 1.2rem; position: relative; line-height: 1.5; }
-  .req-list li::before { content: '✓'; position: absolute; left: 0; color: var(--ola); font-size: 0.8rem; font-weight: 400; }
-
-  .alfab { background: var(--oceano); padding: 5rem 2rem; }
-  .alfab-inner { max-width: 900px; margin: 0 auto; }
-  .alfab .section-label { color: var(--ola); }
-  .alfab .section-title { color: #fff; margin-bottom: 0.8rem; }
-  .alfab-desc { color: rgba(214,245,245,0.6); font-weight: 300; font-size: 0.95rem; line-height: 1.75; max-width: 600px; margin-bottom: 2.5rem; }
-  .modulos { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
-  .modulo { background: rgba(255,255,255,0.05); border: 1px solid rgba(58,191,191,0.2); border-radius: 16px; padding: 1.5rem; transition: background 0.2s; }
-  .modulo:hover { background: rgba(58,191,191,0.08); }
-  .mod-num { font-family: 'Bebas Neue', sans-serif; font-size: 0.8rem; color: rgba(58,191,191,0.5); letter-spacing: 0.1em; margin-bottom: 0.5rem; }
-  .mod-title { font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; color: #fff; letter-spacing: 0.05em; margin-bottom: 0.6rem; }
-  .mod-desc { font-size: 0.83rem; color: rgba(214,245,245,0.55); font-weight: 300; line-height: 1.65; }
-  .mod-ia { border-color: rgba(244,131,61,0.35); background: rgba(244,131,61,0.05); }
-  .mod-ia .mod-title { color: var(--surfista); }
-
-  .cta-final { padding: 6rem 2rem; text-align: center; max-width: 640px; margin: 0 auto; }
-  .cta-final h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2rem, 5vw, 3rem); color: var(--oceano); letter-spacing: 0.05em; margin-bottom: 1rem; line-height: 1.1; }
-  .cta-final h2 em { color: var(--ola); font-style: normal; }
-  .cta-final p { font-size: 1rem; font-weight: 300; color: var(--roca); line-height: 1.75; margin-bottom: 1rem; }
-  .cta-email { display: inline-flex; align-items: center; gap: 8px; background: rgba(58,191,191,0.08); border: 1px solid rgba(58,191,191,0.25); border-radius: 50px; padding: 10px 20px; margin-bottom: 2rem; font-size: 0.9rem; color: var(--marea); text-decoration: none; font-weight: 400; transition: background 0.2s, border-color 0.2s; }
-  .cta-email:hover { background: rgba(58,191,191,0.15); border-color: var(--ola); color: var(--oceano); }
-  .cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-  .btn-primary { background: var(--surfista); color: #fff; padding: 14px 34px; border-radius: 50px; font-family: 'Bebas Neue', sans-serif; font-size: 1.05rem; letter-spacing: 0.1em; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; display: inline-block; }
-  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(244,131,61,0.4); }
-  .btn-outline { border: 1.5px solid rgba(11,37,64,0.3); color: var(--oceano); padding: 14px 34px; border-radius: 50px; font-family: 'Bebas Neue', sans-serif; font-size: 1.05rem; letter-spacing: 0.1em; text-decoration: none; transition: background 0.2s; display: inline-block; }
-  .btn-outline:hover { background: rgba(11,37,64,0.06); }
-
-  footer { background: var(--oceano); padding: 1.8rem 2.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; border-top: 1px solid rgba(58,191,191,0.12); }
-  .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; letter-spacing: 0.1em; color: var(--ola); text-decoration: none; }
-  .footer-logo span { color: rgba(255,255,255,0.55); }
-  .footer-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
-  .footer-links a { font-size: 0.8rem; color: rgba(214,245,245,0.4); text-decoration: none; transition: color 0.2s; }
-  .footer-links a:hover { color: var(--ola); }
-  .footer-copy { font-size: 0.78rem; color: rgba(214,245,245,0.35); font-weight: 300; }
-
-  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-  @media (max-width: 640px) {
-    nav { padding: 0 1.2rem; } .nav-links { gap: 0.8rem; }
-    .filosofia { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.2rem; }
-    .etapas { padding: 2rem 1.2rem 4rem; }
-    .etapa { grid-template-columns: 60px 1fr; }
-    .etapa-num { width: 44px; height: 44px; font-size: 1rem; }
-    .etapa:not(:last-child) .etapa-line::after { left: 29px; }
-    .criterios, .software, .perfil, .alfab { padding: 3rem 1.2rem; }
-    footer { padding: 1.5rem 1.2rem; flex-direction: column; align-items: flex-start; }
+  :root { --oceano:#0B2540; --marea:#1A5E8F; --ola:#3ABFBF; --surfista:#F4833D; --brisa:#D6F5F5; --espuma:#F0F6FA; --roca:#3A4A5C; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:'DM Sans',sans-serif; background:var(--espuma); color:var(--roca); overflow-x:hidden; }
+  nav { position:sticky; top:0; z-index:100; background:rgba(11,37,64,0.97); backdrop-filter:blur(8px); display:flex; align-items:center; justify-content:space-between; padding:0 2.5rem; height:62px; }
+  .nav-logo { font-family:'Bebas Neue',sans-serif; font-size:1.4rem; color:var(--ola); letter-spacing:0.08em; text-decoration:none; }
+  .nav-logo span { color:#fff; }
+  .nav-links { display:flex; gap:2rem; align-items:center; }
+  .nav-links a { color:rgba(255,255,255,0.7); text-decoration:none; font-size:0.85rem; letter-spacing:0.04em; text-transform:uppercase; transition:color 0.2s; }
+  .nav-links a:hover { color:var(--ola); }
+  .nav-back { color:rgba(255,255,255,0.5) !important; font-size:0.78rem !important; border:1px solid rgba(255,255,255,0.15); padding:6px 14px; border-radius:50px; }
+  .nav-back:hover { border-color:var(--ola); color:var(--ola) !important; }
+  .page-hero { background:var(--oceano); padding:5rem 2rem 4rem; text-align:center; position:relative; overflow:hidden; }
+  .page-hero::before { content:''; position:absolute; bottom:-2px; left:0; right:0; height:70px; background:var(--espuma); clip-path:ellipse(55% 100% at 50% 100%); }
+  .page-hero::after { content:''; position:absolute; inset:0; background-image:radial-gradient(circle at 15% 60%, rgba(58,191,191,0.07) 0%, transparent 50%),radial-gradient(circle at 85% 30%, rgba(26,94,143,0.09) 0%, transparent 40%); pointer-events:none; }
+  .page-badge { display:inline-flex; align-items:center; gap:8px; background:rgba(58,191,191,0.12); border:1px solid rgba(58,191,191,0.3); color:var(--ola); border-radius:50px; font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; padding:5px 14px; margin-bottom:1.5rem; position:relative; z-index:1; animation:fadeUp 0.5s ease both; }
+  .page-hero h1 { font-family:'Bebas Neue',sans-serif; font-size:clamp(2.8rem,7vw,5rem); color:#fff; line-height:1; letter-spacing:0.06em; position:relative; z-index:1; animation:fadeUp 0.6s 0.1s ease both; }
+  .page-hero h1 em { color:var(--ola); font-style:normal; }
+  .page-hero p { margin-top:1.2rem; font-size:1.05rem; font-weight:300; color:rgba(214,245,245,0.7); max-width:560px; line-height:1.75; margin-left:auto; margin-right:auto; position:relative; z-index:1; animation:fadeUp 0.6s 0.2s ease both; }
+  .filosofia { max-width:860px; margin:0 auto; padding:5rem 2rem 3rem; display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:center; }
+  .filosofia-text h2 { font-family:'Bebas Neue',sans-serif; font-size:clamp(1.8rem,3.5vw,2.5rem); color:var(--oceano); letter-spacing:0.05em; margin-bottom:1rem; line-height:1.1; }
+  .filosofia-text h2 em { color:var(--ola); font-style:normal; }
+  .filosofia-text p { font-size:0.95rem; font-weight:300; line-height:1.8; color:var(--roca); margin-bottom:1rem; }
+  .filosofia-stats { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .fstat { background:#fff; border-radius:16px; padding:1.4rem 1.2rem; border:1px solid rgba(58,191,191,0.15); text-align:center; }
+  .fstat-num { font-family:'Bebas Neue',sans-serif; font-size:2rem; color:var(--ola); letter-spacing:0.05em; line-height:1; }
+  .fstat-label { font-size:0.78rem; color:var(--roca); font-weight:300; margin-top:0.3rem; line-height:1.3; }
+  .etapas { padding:3rem 2rem 6rem; max-width:900px; margin:0 auto; }
+  .etapas-header { text-align:center; margin-bottom:4rem; }
+  .section-label { font-size:0.75rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--surfista); font-weight:400; margin-bottom:0.5rem; }
+  .section-title { font-family:'Bebas Neue',sans-serif; font-size:clamp(2rem,4.5vw,2.8rem); color:var(--oceano); letter-spacing:0.05em; line-height:1.1; }
+  .section-desc { color:var(--roca); font-weight:300; line-height:1.8; font-size:0.95rem; max-width:580px; margin-top:0.6rem; }
+  .etapa { display:grid; grid-template-columns:80px 1fr; gap:0; margin-bottom:0; position:relative; }
+  .etapa:not(:last-child) .etapa-line::after { content:''; position:absolute; left:39px; top:80px; bottom:-20px; width:2px; background:linear-gradient(to bottom,rgba(58,191,191,0.4),rgba(58,191,191,0.05)); }
+  .etapa-line { display:flex; flex-direction:column; align-items:center; padding-top:4px; position:relative; }
+  .etapa-num { width:56px; height:56px; border-radius:50%; background:var(--oceano); border:2px solid var(--ola); display:flex; align-items:center; justify-content:center; font-family:'Bebas Neue',sans-serif; font-size:1.2rem; color:var(--ola); letter-spacing:0.05em; flex-shrink:0; z-index:1; }
+  .etapa-body { padding:0 0 3.5rem 1.5rem; }
+  .etapa-tag { display:inline-block; font-size:0.68rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--surfista); font-weight:400; margin-bottom:0.4rem; }
+  .etapa-title { font-family:'Bebas Neue',sans-serif; font-size:1.7rem; color:var(--oceano); letter-spacing:0.05em; margin-bottom:0.8rem; line-height:1; }
+  .etapa-desc { font-size:0.95rem; font-weight:300; line-height:1.8; color:var(--roca); margin-bottom:1.2rem; }
+  .etapa-items { list-style:none; display:flex; flex-direction:column; gap:6px; }
+  .etapa-items li { font-size:0.88rem; font-weight:300; color:var(--roca); padding-left:1.2rem; position:relative; line-height:1.5; }
+  .etapa-items li::before { content:''; position:absolute; left:0; top:8px; width:6px; height:6px; border-radius:50%; background:var(--ola); }
+  .etapa-note { margin-top:1rem; background:rgba(58,191,191,0.07); border-left:3px solid var(--ola); border-radius:0 10px 10px 0; padding:0.8rem 1rem; font-size:0.85rem; font-weight:300; color:var(--roca); font-style:italic; line-height:1.6; }
+  .etapa-note strong { font-weight:400; color:var(--marea); font-style:normal; }
+  .criterios { background:var(--oceano); padding:5rem 2rem; }
+  .criterios-inner { max-width:900px; margin:0 auto; }
+  .criterios .section-label { color:var(--ola); }
+  .criterios .section-title { color:#fff; margin-bottom:0.8rem; }
+  .criterios-desc { color:rgba(214,245,245,0.6); font-weight:300; font-size:0.95rem; line-height:1.75; max-width:580px; margin-bottom:2.5rem; }
+  .criterios-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; }
+  .criterio-card { background:rgba(255,255,255,0.05); border:1px solid rgba(58,191,191,0.2); border-radius:16px; padding:1.4rem; }
+  .criterio-icon { font-size:1.5rem; margin-bottom:0.8rem; }
+  .criterio-title { font-family:'Bebas Neue',sans-serif; font-size:1rem; color:var(--ola); letter-spacing:0.06em; margin-bottom:0.5rem; }
+  .criterio-desc { font-size:0.82rem; color:rgba(214,245,245,0.55); font-weight:300; line-height:1.6; }
+  .criterio-card.warn { border-color:rgba(244,131,61,0.3); }
+  .criterio-card.warn .criterio-title { color:var(--surfista); }
+  .software { padding:5rem 2rem; max-width:900px; margin:0 auto; }
+  .sw-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; margin-top:2.5rem; }
+  .sw-card { background:#fff; border-radius:16px; padding:1.5rem; border:1px solid rgba(58,191,191,0.15); }
+  .sw-os { font-family:'Bebas Neue',sans-serif; font-size:1rem; color:var(--oceano); letter-spacing:0.06em; margin-bottom:0.3rem; }
+  .sw-for { font-size:0.75rem; color:var(--surfista); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:1rem; }
+  .sw-list { list-style:none; display:flex; flex-direction:column; gap:5px; }
+  .sw-list li { font-size:0.85rem; font-weight:300; color:var(--roca); padding-left:1rem; position:relative; }
+  .sw-list li::before { content:''; position:absolute; left:0; top:7px; width:5px; height:5px; border-radius:50%; background:var(--ola); }
+  .perfil { background:var(--espuma); padding:5rem 2rem; }
+  .perfil-inner { max-width:900px; margin:0 auto; }
+  .perfil-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin-top:2.5rem; }
+  .perfil-card { background:#fff; border-radius:16px; padding:1.5rem; border:1px solid rgba(58,191,191,0.15); }
+  .perfil-icon { font-size:1.4rem; margin-bottom:0.8rem; }
+  .perfil-title { font-family:'Bebas Neue',sans-serif; font-size:1rem; color:var(--oceano); letter-spacing:0.05em; margin-bottom:0.5rem; }
+  .perfil-desc { font-size:0.84rem; color:var(--roca); font-weight:300; line-height:1.65; }
+  .requisito-box { margin-top:2rem; background:rgba(58,191,191,0.07); border:1px solid rgba(58,191,191,0.2); border-radius:16px; padding:1.5rem 2rem; }
+  .requisito-box h3 { font-family:'Bebas Neue',sans-serif; font-size:1.1rem; color:var(--oceano); letter-spacing:0.05em; margin-bottom:1rem; }
+  .req-list { list-style:none; display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:8px; }
+  .req-list li { font-size:0.85rem; font-weight:300; color:var(--roca); padding-left:1.2rem; position:relative; line-height:1.5; }
+  .req-list li::before { content:'✓'; position:absolute; left:0; color:var(--ola); font-size:0.8rem; font-weight:400; }
+  .alfab { background:var(--oceano); padding:5rem 2rem; }
+  .alfab-inner { max-width:900px; margin:0 auto; }
+  .alfab .section-label { color:var(--ola); }
+  .alfab .section-title { color:#fff; margin-bottom:0.8rem; }
+  .alfab-desc { color:rgba(214,245,245,0.6); font-weight:300; font-size:0.95rem; line-height:1.75; max-width:600px; margin-bottom:2.5rem; }
+  .modulos { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; }
+  .modulo { background:rgba(255,255,255,0.05); border:1px solid rgba(58,191,191,0.2); border-radius:16px; padding:1.5rem; transition:background 0.2s; }
+  .modulo:hover { background:rgba(58,191,191,0.08); }
+  .mod-num { font-family:'Bebas Neue',sans-serif; font-size:0.8rem; color:rgba(58,191,191,0.5); letter-spacing:0.1em; margin-bottom:0.5rem; }
+  .mod-title { font-family:'Bebas Neue',sans-serif; font-size:1.1rem; color:#fff; letter-spacing:0.05em; margin-bottom:0.6rem; }
+  .mod-desc { font-size:0.83rem; color:rgba(214,245,245,0.55); font-weight:300; line-height:1.65; }
+  .mod-ia { border-color:rgba(244,131,61,0.35); background:rgba(244,131,61,0.05); }
+  .mod-ia .mod-title { color:var(--surfista); }
+  .cta-final { padding:6rem 2rem; text-align:center; max-width:640px; margin:0 auto; }
+  .cta-final h2 { font-family:'Bebas Neue',sans-serif; font-size:clamp(2rem,5vw,3rem); color:var(--oceano); letter-spacing:0.05em; margin-bottom:1rem; line-height:1.1; }
+  .cta-final h2 em { color:var(--ola); font-style:normal; }
+  .cta-final p { font-size:1rem; font-weight:300; color:var(--roca); line-height:1.75; margin-bottom:1rem; }
+  .cta-email { display:inline-flex; align-items:center; gap:8px; background:rgba(58,191,191,0.08); border:1px solid rgba(58,191,191,0.25); border-radius:50px; padding:10px 20px; margin-bottom:2rem; font-size:0.9rem; color:var(--marea); text-decoration:none; font-weight:400; transition:background 0.2s,border-color 0.2s; }
+  .cta-email:hover { background:rgba(58,191,191,0.15); border-color:var(--ola); color:var(--oceano); }
+  .cta-btns { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
+  .btn-primary { background:var(--surfista); color:#fff; padding:14px 34px; border-radius:50px; font-family:'Bebas Neue',sans-serif; font-size:1.05rem; letter-spacing:0.1em; text-decoration:none; transition:transform 0.2s,box-shadow 0.2s; display:inline-block; }
+  .btn-primary:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(244,131,61,0.4); }
+  .btn-outline { border:1.5px solid rgba(11,37,64,0.3); color:var(--oceano); padding:14px 34px; border-radius:50px; font-family:'Bebas Neue',sans-serif; font-size:1.05rem; letter-spacing:0.1em; text-decoration:none; transition:background 0.2s; display:inline-block; }
+  .btn-outline:hover { background:rgba(11,37,64,0.06); }
+  footer { background:var(--oceano); padding:1.8rem 2.5rem; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem; border-top:1px solid rgba(58,191,191,0.12); }
+  .footer-logo { font-family:'Bebas Neue',sans-serif; font-size:1.1rem; letter-spacing:0.1em; color:var(--ola); text-decoration:none; }
+  .footer-logo span { color:rgba(255,255,255,0.55); }
+  .footer-links { display:flex; gap:1.5rem; flex-wrap:wrap; }
+  .footer-links a { font-size:0.8rem; color:rgba(214,245,245,0.4); text-decoration:none; transition:color 0.2s; }
+  .footer-links a:hover { color:var(--ola); }
+  .footer-copy { font-size:0.78rem; color:rgba(214,245,245,0.35); font-weight:300; }
+  @keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+  @media (max-width:640px) {
+    nav{padding:0 1.2rem;} .nav-links{gap:0.8rem;}
+    .filosofia{grid-template-columns:1fr;gap:2rem;padding:3rem 1.2rem;}
+    .etapas{padding:2rem 1.2rem 4rem;}
+    .etapa{grid-template-columns:60px 1fr;}
+    .etapa-num{width:44px;height:44px;font-size:1rem;}
+    .etapa:not(:last-child) .etapa-line::after{left:29px;}
+    .criterios,.software,.perfil,.alfab{padding:3rem 1.2rem;}
+    footer{padding:1.5rem 1.2rem;flex-direction:column;align-items:flex-start;}
   }
 </style>
 </head>
@@ -188,7 +170,6 @@
     <p class="section-label">Paso a paso</p>
     <h2 class="section-title">Las 5 etapas</h2>
   </div>
-
   <div class="etapa">
     <div class="etapa-line"><div class="etapa-num">01</div></div>
     <div class="etapa-body">
@@ -206,7 +187,6 @@
       <div class="etapa-note"><strong>Criterio de corte:</strong> si el equipo no puede correr un sistema operativo liviano con fluidez mínima para navegación y ofimática básica, se descarta como unidad de trabajo. La experiencia enseña a reconocer ese límite y respetarlo.</div>
     </div>
   </div>
-
   <div class="etapa">
     <div class="etapa-line"><div class="etapa-num">02</div></div>
     <div class="etapa-body">
@@ -223,7 +203,6 @@
       <div class="etapa-note"><strong>Selección de SO:</strong> Linux Mint para equipos 64-bit con 4 GB+ RAM. Q4OS con perfil Trinity para equipos 32-bit o con recursos muy limitados — su escritorio familiar reduce la curva de aprendizaje para usuarios acostumbrados a Windows.</div>
     </div>
   </div>
-
   <div class="etapa">
     <div class="etapa-line"><div class="etapa-num">03</div></div>
     <div class="etapa-body">
@@ -241,7 +220,6 @@
       <div class="etapa-note"><strong>Soporte remoto:</strong> la instalación de Hamachi permite dar asistencia técnica sin necesidad de desplazamiento, reduciendo tiempos de respuesta y manteniendo los equipos operativos a largo plazo.</div>
     </div>
   </div>
-
   <div class="etapa">
     <div class="etapa-line"><div class="etapa-num">04</div></div>
     <div class="etapa-body">
@@ -260,7 +238,6 @@
       <div class="etapa-note">El ritmo es del usuario, no del instructor. El objetivo no es que sepan todo — es que pierdan el miedo y ganen confianza para seguir aprendiendo solos.</div>
     </div>
   </div>
-
   <div class="etapa">
     <div class="etapa-line"><div class="etapa-num">05</div></div>
     <div class="etapa-body">
@@ -280,33 +257,16 @@
   </div>
 </section>
 
-<!-- PERFIL DEL PARTICIPANTE -->
 <section class="perfil">
   <div class="perfil-inner">
     <p class="section-label">¿Para quién es esto?</p>
     <h2 class="section-title">Perfil del participante</h2>
     <p class="section-desc">El programa está diseñado para ser accesible. No se requiere experiencia previa — solo disposición y algunas condiciones básicas.</p>
     <div class="perfil-grid">
-      <div class="perfil-card">
-        <div class="perfil-icon">👤</div>
-        <div class="perfil-title">Edad</div>
-        <div class="perfil-desc">Mayores de 15 años. Sin límite superior — la tecnología no tiene fecha de vencimiento y tampoco el aprendizaje.</div>
-      </div>
-      <div class="perfil-card">
-        <div class="perfil-icon">📱</div>
-        <div class="perfil-title">Dispositivo</div>
-        <div class="perfil-desc">Smartphone propio con acceso a datos o WiFi. Es el punto de partida de todo el programa y la herramienta más cercana que ya tienen.</div>
-      </div>
-      <div class="perfil-card">
-        <div class="perfil-icon">📧</div>
-        <div class="perfil-title">Cuenta Gmail</div>
-        <div class="perfil-desc">Requisito previo: tener una cuenta de Gmail activa. Es la llave de acceso a la mayoría de las herramientas que se usarán en el curso.</div>
-      </div>
-      <div class="perfil-card">
-        <div class="perfil-icon">🎯</div>
-        <div class="perfil-title">Motivación</div>
-        <div class="perfil-desc">Disposición para aprender y aplicar. No importa el punto de partida — importa querer avanzar. Eso es lo único que no podemos instalar.</div>
-      </div>
+      <div class="perfil-card"><div class="perfil-icon">👤</div><div class="perfil-title">Edad</div><div class="perfil-desc">Mayores de 15 años. Sin límite superior — la tecnología no tiene fecha de vencimiento y tampoco el aprendizaje.</div></div>
+      <div class="perfil-card"><div class="perfil-icon">📱</div><div class="perfil-title">Dispositivo</div><div class="perfil-desc">Smartphone propio con acceso a datos o WiFi. Es el punto de partida de todo el programa y la herramienta más cercana que ya tienen.</div></div>
+      <div class="perfil-card"><div class="perfil-icon">📧</div><div class="perfil-title">Cuenta Gmail</div><div class="perfil-desc">Requisito previo: tener una cuenta de Gmail activa. Es la llave de acceso a la mayoría de las herramientas que se usarán en el curso.</div></div>
+      <div class="perfil-card"><div class="perfil-icon">🎯</div><div class="perfil-title">Motivación</div><div class="perfil-desc">Disposición para aprender y aplicar. No importa el punto de partida — importa querer avanzar. Eso es lo único que no podemos instalar.</div></div>
     </div>
     <div class="requisito-box">
       <h3>Condiciones para el buen aprovechamiento del curso</h3>
@@ -322,119 +282,43 @@
   </div>
 </section>
 
-<!-- CRITERIOS HARDWARE -->
 <section class="criterios">
   <div class="criterios-inner">
     <p class="section-label">Referencia técnica</p>
     <h2 class="section-title">Criterios de selección de hardware</h2>
     <p class="criterios-desc">No todos los equipos merecen el mismo nivel de inversión. Estos son los parámetros que guían la decisión de recuperar, optimizar o descartar.</p>
     <div class="criterios-grid">
-      <div class="criterio-card">
-        <div class="criterio-icon">✅</div>
-        <div class="criterio-title">Recuperación completa</div>
-        <div class="criterio-desc">CPU de doble núcleo 64-bit o superior, 4 GB+ RAM ampliable, disco reemplazable. Ejemplo: HP Pavilion con i3.</div>
-      </div>
-      <div class="criterio-card">
-        <div class="criterio-icon">🔧</div>
-        <div class="criterio-title">Recuperación básica</div>
-        <div class="criterio-desc">CPU 32-bit o limitado, 2-4 GB RAM ampliable. Requiere SO liviano y optimizaciones de memoria. Ejemplo: Toshiba U305.</div>
-      </div>
-      <div class="criterio-card warn">
-        <div class="criterio-icon">⚠️</div>
-        <div class="criterio-title">Caso límite</div>
-        <div class="criterio-desc">RAM soldada en tope (2 GB), disco lento no reemplazable, Atom de primera generación. Recuperación posible pero frágil.</div>
-      </div>
-      <div class="criterio-card warn">
-        <div class="criterio-icon">🚫</div>
-        <div class="criterio-title">Descarte o piezas</div>
-        <div class="criterio-desc">Hardware dañado irreparablemente, CPU de un núcleo muy lento, sin posibilidad de instalar SO moderno liviano.</div>
-      </div>
+      <div class="criterio-card"><div class="criterio-icon">✅</div><div class="criterio-title">Recuperación completa</div><div class="criterio-desc">CPU de doble núcleo 64-bit o superior, 4 GB+ RAM ampliable, disco reemplazable. Ejemplo: HP Pavilion con i3.</div></div>
+      <div class="criterio-card"><div class="criterio-icon">🔧</div><div class="criterio-title">Recuperación básica</div><div class="criterio-desc">CPU 32-bit o limitado, 2-4 GB RAM ampliable. Requiere SO liviano y optimizaciones de memoria. Ejemplo: Toshiba U305.</div></div>
+      <div class="criterio-card warn"><div class="criterio-icon">⚠️</div><div class="criterio-title">Caso límite</div><div class="criterio-desc">RAM soldada en tope (2 GB), disco lento no reemplazable, Atom de primera generación. Recuperación posible pero frágil.</div></div>
+      <div class="criterio-card warn"><div class="criterio-icon">🚫</div><div class="criterio-title">Descarte o piezas</div><div class="criterio-desc">Hardware dañado irreparablemente, CPU de un núcleo muy lento, sin posibilidad de instalar SO moderno liviano.</div></div>
     </div>
   </div>
 </section>
 
-<!-- SOFTWARE -->
 <section class="software">
   <p class="section-label">Stack tecnológico</p>
   <h2 class="section-title">Software que instalamos</h2>
-  <p class="section-desc" style="margin-bottom:0; max-width:560px;">Selección basada en ligereza, estabilidad y compatibilidad con hardware diverso. Todo software libre y gratuito.</p>
+  <p class="section-desc" style="margin-bottom:0;max-width:560px;">Selección basada en ligereza, estabilidad y compatibilidad con hardware diverso. Todo software libre y gratuito.</p>
   <div class="sw-grid">
-    <div class="sw-card">
-      <div class="sw-os">Linux Mint 22.x</div>
-      <div class="sw-for">Para equipos 64-bit con 4 GB+ RAM</div>
-      <ul class="sw-list">
-        <li>Firefox — navegación</li>
-        <li>LibreOffice — ofimática completa</li>
-        <li>VLC — multimedia</li>
-        <li>Thunderbird — correo</li>
-        <li>Hamachi — acceso remoto</li>
-        <li>GIMP — edición de imágenes</li>
-      </ul>
-    </div>
-    <div class="sw-card">
-      <div class="sw-os">Q4OS 5.x Gemini</div>
-      <div class="sw-for">Para equipos 32-bit o con recursos limitados</div>
-      <ul class="sw-list">
-        <li>Firefox ESR — navegación liviana</li>
-        <li>LibreOffice — ofimática</li>
-        <li>VLC — multimedia</li>
-        <li>Perfil Pure o Basic según hardware</li>
-        <li>ZRAM + Swapfile — gestión de memoria</li>
-        <li>Hamachi — acceso remoto</li>
-      </ul>
-    </div>
-    <div class="sw-card">
-      <div class="sw-os">Optimizaciones del sistema</div>
-      <div class="sw-for">Aplicadas según necesidad del equipo</div>
-      <ul class="sw-list">
-        <li>swappiness=10 — reduce uso agresivo de swap</li>
-        <li>ZRAM — compresión RAM en tiempo real</li>
-        <li>Swapfile — memoria virtual en disco</li>
-        <li>Limpieza de paquetes innecesarios</li>
-        <li>Actualizaciones automáticas de seguridad</li>
-        <li>lm-sensors — monitoreo de temperatura</li>
-      </ul>
-    </div>
+    <div class="sw-card"><div class="sw-os">Linux Mint 22.x</div><div class="sw-for">Para equipos 64-bit con 4 GB+ RAM</div><ul class="sw-list"><li>Firefox — navegación</li><li>LibreOffice — ofimática completa</li><li>VLC — multimedia</li><li>Thunderbird — correo</li><li>Hamachi — acceso remoto</li><li>GIMP — edición de imágenes</li></ul></div>
+    <div class="sw-card"><div class="sw-os">Q4OS 5.x Gemini</div><div class="sw-for">Para equipos 32-bit o con recursos limitados</div><ul class="sw-list"><li>Firefox ESR — navegación liviana</li><li>LibreOffice — ofimática</li><li>VLC — multimedia</li><li>Perfil Pure o Basic según hardware</li><li>ZRAM + Swapfile — gestión de memoria</li><li>Hamachi — acceso remoto</li></ul></div>
+    <div class="sw-card"><div class="sw-os">Optimizaciones del sistema</div><div class="sw-for">Aplicadas según necesidad del equipo</div><ul class="sw-list"><li>swappiness=10 — reduce uso agresivo de swap</li><li>ZRAM — compresión RAM en tiempo real</li><li>Swapfile — memoria virtual en disco</li><li>Limpieza de paquetes innecesarios</li><li>Actualizaciones automáticas de seguridad</li><li>lm-sensors — monitoreo de temperatura</li></ul></div>
   </div>
 </section>
 
-<!-- MODULOS -->
 <section class="alfab">
   <div class="alfab-inner">
     <p class="section-label">Plan de formación</p>
     <h2 class="section-title">Módulos del curso piloto</h2>
     <p class="alfab-desc">12 horas académicas distribuidas en 3 sesiones de 4 horas. El contenido se adapta al nivel del grupo sin abandonar la profundidad necesaria para generar autonomía real.</p>
     <div class="modulos">
-      <div class="modulo">
-        <div class="mod-num">MÓDULO 01</div>
-        <div class="mod-title">Mi celular, mi herramienta</div>
-        <div class="mod-desc">Diagnóstico del dispositivo, limpieza de caché, gestión de almacenamiento y apps. Primera sesión de impacto visible: el teléfono rinde mejor antes de terminar la clase.</div>
-      </div>
-      <div class="modulo">
-        <div class="mod-num">MÓDULO 02</div>
-        <div class="mod-title">Fundamentos digitales</div>
-        <div class="mod-desc">Sistema operativo, archivos, carpetas y escritorio explicados con analogías del negocio. La RAM como mostrador. El disco como depósito. El procesador como almacenista.</div>
-      </div>
-      <div class="modulo">
-        <div class="mod-num">MÓDULO 03</div>
-        <div class="mod-title">Internet y comunicación</div>
-        <div class="mod-desc">Navegación segura, buscadores, correo electrónico (Gmail), videollamadas y comunicación profesional digital. Cómo moverse sin perderse ni exponerse.</div>
-      </div>
-      <div class="modulo">
-        <div class="mod-num">MÓDULO 04</div>
-        <div class="mod-title">Ofimática práctica</div>
-        <div class="mod-desc">LibreOffice aplicado a casos reales: redactar, tabular, presentar. Documentos útiles para el trabajo o el negocio desde el primer intento.</div>
-      </div>
-      <div class="modulo mod-ia">
-        <div class="mod-num">MÓDULO 05</div>
-        <div class="mod-title">Introducción a la IA</div>
-        <div class="mod-desc">Qué es, cómo se usa y para qué sirve. Prompting básico, herramientas gratuitas y uso responsable. La IA como aliado personal — no como amenaza.</div>
-      </div>
-      <div class="modulo mod-ia">
-        <div class="mod-num">MÓDULO 06</div>
-        <div class="mod-title">IA en la vida cotidiana</div>
-        <div class="mod-desc">Casos prácticos: redactar, resumir, traducir, aprender, emprender. Cómo integrar estas herramientas al celular y al PC para trabajar mejor todos los días.</div>
-      </div>
+      <div class="modulo"><div class="mod-num">MÓDULO 01</div><div class="mod-title">Mi celular, mi herramienta</div><div class="mod-desc">Diagnóstico del dispositivo, limpieza de caché, gestión de almacenamiento y apps. Primera sesión de impacto visible: el teléfono rinde mejor antes de terminar la clase.</div></div>
+      <div class="modulo"><div class="mod-num">MÓDULO 02</div><div class="mod-title">Fundamentos digitales</div><div class="mod-desc">Sistema operativo, archivos, carpetas y escritorio explicados con analogías del negocio. La RAM como mostrador. El disco como depósito. El procesador como almacenista.</div></div>
+      <div class="modulo"><div class="mod-num">MÓDULO 03</div><div class="mod-title">Internet y comunicación</div><div class="mod-desc">Navegación segura, buscadores, correo electrónico (Gmail), videollamadas y comunicación profesional digital. Cómo moverse sin perderse ni exponerse.</div></div>
+      <div class="modulo"><div class="mod-num">MÓDULO 04</div><div class="mod-title">Ofimática práctica</div><div class="mod-desc">LibreOffice aplicado a casos reales: redactar, tabular, presentar. Documentos útiles para el trabajo o el negocio desde el primer intento.</div></div>
+      <div class="modulo mod-ia"><div class="mod-num">MÓDULO 05</div><div class="mod-title">Introducción a la IA</div><div class="mod-desc">Qué es, cómo se usa y para qué sirve. Prompting básico, herramientas gratuitas y uso responsable. La IA como aliado personal — no como amenaza.</div></div>
+      <div class="modulo mod-ia"><div class="mod-num">MÓDULO 06</div><div class="mod-title">IA en la vida cotidiana</div><div class="mod-desc">Casos prácticos: redactar, resumir, traducir, aprender, emprender. Cómo integrar estas herramientas al celular y al PC para trabajar mejor todos los días.</div></div>
     </div>
   </div>
 </section>
