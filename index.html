@@ -26,7 +26,7 @@ gtag("config", "G-GK04D527HQ");
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: 'DM Sans', sans-serif; background: var(--espuma); color: var(--roca); overflow-x: hidden; }
 
-/* ===== NAV RESPONSIVE ===== */
+/* ===== NAV ===== */
 nav {
 position: sticky; top: 0; z-index: 1000;
 background: rgba(11,37,64,0.97); backdrop-filter: blur(8px);
@@ -98,17 +98,40 @@ h1 span { display: block; font-size: 0.55em; letter-spacing: 0.18em; color: rgba
 .video-wrapper { width: 100%; max-width: 410px; border-radius: 18px; overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,0.45); background: #000; border: 1px solid rgba(58,191,191,0.2); }
 .video-wrapper video { display: block; width: 100%; }
 
-/* ===== SECCIONES GENERALES ===== */
-.metodologia, .proceso-preview, .vision { padding: 4rem 1.5rem; max-width: 960px; margin: 0 auto; }
-.sectores-wrap, .programa { padding: 4rem 1.5rem; }
-.sectores-inner, .programa-inner { max-width: 960px; margin: 0 auto; }
-.section-label { font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--surfista); font-weight: 400; margin-bottom: 0.5rem; }
-.section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(1.8rem, 5vw, 3rem); color: var(--oceano); letter-spacing: 0.05em; margin-bottom: 0.8rem; line-height: 1.1; }
-.sectores-wrap .section-title, .programa .section-title { color: #fff; }
-.section-desc { color: var(--roca); font-weight: 300; max-width: 560px; line-height: 1.8; font-size: 1rem; margin-bottom: 2.5rem; }
-.sectores-wrap .section-desc, .programa .section-desc { color: rgba(214,245,245,0.6); }
+/* ===== SECCIONES ===== */
+.metodologia { padding: 6rem 2rem; max-width: 960px; margin: 0 auto; }
+.sectores-wrap { background: var(--oceano); padding: 5rem 2rem; }
+.sectores-inner { max-width: 960px; margin: 0 auto; }
+.proceso-preview { padding: 6rem 2rem; max-width: 960px; margin: 0 auto; }
+.programa { background: var(--oceano); padding: 5rem 2rem; }
+.programa-inner { max-width: 960px; margin: 0 auto; }
+.vision { padding: 5rem 2rem; text-align: center; }
+.vision-inner { max-width: 700px; margin: 0 auto; }
+.contact { padding: 6rem 2rem; max-width: 640px; margin: 0 auto; text-align: center; }
+.descargas-wrap { background: var(--espuma); padding: 6rem 2rem; }
+.descargas-inner { max-width: 960px; margin: 0 auto; }
 
-/* ===== GRIDS RESPONSIVE ===== */
+.section-label { font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--surfista); font-weight: 400; margin-bottom: 0.5rem; }
+.sectores-wrap .section-label { color: var(--ola); }
+.programa .section-label { color: var(--ola); }
+.descargas-wrap .section-label { color: var(--surfista); }
+
+.section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2rem, 5vw, 3rem); color: var(--oceano); letter-spacing: 0.05em; margin-bottom: 0.8rem; line-height: 1.1; }
+.sectores-wrap .section-title { color: #fff; }
+.programa .section-title { color: #fff; }
+.descargas-wrap .section-title { color: var(--oceano); }
+.contact .section-title { color: var(--oceano); }
+.vision h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(1.8rem, 4vw, 2.8rem); color: var(--oceano); letter-spacing: 0.05em; margin-bottom: 1.2rem; line-height: 1.15; }
+.vision h2 em { color: var(--ola); font-style: normal; }
+.vision p { color: var(--roca); font-weight: 300; font-size: 1rem; line-height: 1.8; }
+
+.section-desc { color: var(--roca); font-weight: 300; max-width: 560px; line-height: 1.8; font-size: 1rem; margin-bottom: 3rem; }
+.sectores-wrap .section-desc { color: rgba(214,245,245,0.6); }
+.programa .section-desc { color: rgba(214,245,245,0.6); }
+.descargas-wrap .section-desc { color: var(--roca); }
+.contact-desc { font-size: 1rem; color: var(--roca); font-weight: 300; line-height: 1.7; margin-bottom: 2.5rem; }
+
+/* ===== GRIDS ===== */
 .met-grid, .sector-grid, .prog-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -120,16 +143,23 @@ h1 span { display: block; font-size: 0.55em; letter-spacing: 0.18em; color: rgba
   gap: 10px;
   margin: 2.5rem 0;
 }
-.pipe-step { text-align: center; padding: 1.2rem 0.5rem; position: relative; }
-.pipe-step::after { content: '→'; position: absolute; right: -6px; top: 50%; transform: translateY(-50%); color: rgba(58,191,191,0.35); font-size: 1.1rem; }
-.pipe-step:last-child::after { display: none; }
-.pipe-num { width: 44px; height: 44px; border-radius: 50%; background: var(--oceano); border: 2px solid var(--ola); display: flex; align-items: center; justify-content: center; margin: 0 auto 0.8rem; font-family: 'Bebas Neue', sans-serif; font-size: 1rem; color: var(--ola); font-weight: 600; letter-spacing: 0.04em; }
-.pipe-label { font-family: 'Bebas Neue', sans-serif; font-size: 0.85rem; color: var(--oceano); letter-spacing: 0.05em; line-height: 1.3; }
-.pipe-sub { font-size: 0.7rem; color: var(--roca); margin-top: 0.3rem; font-weight: 300; }
+.app-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-top: 2.5rem;
+}
 
 /* ===== CARDS ===== */
-.met-card, .sector-card { border-radius: 20px; padding: 2rem; position: relative; overflow: hidden; transition: transform 0.25s, box-shadow 0.25s, background 0.25s; }
-.met-card { background: #fff; border: 1px solid rgba(58,191,191,0.15); }
+.met-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 2rem;
+  border: 1px solid rgba(58,191,191,0.15);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
 .met-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(26,94,143,0.1); }
 .met-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--ola); }
 .met-card.accent::before { background: var(--surfista); }
@@ -139,7 +169,15 @@ h1 span { display: block; font-size: 0.55em; letter-spacing: 0.18em; color: rgba
 .met-desc { font-size: 0.88rem; color: var(--roca); font-weight: 300; line-height: 1.7; }
 .met-quote { margin-top: 1rem; font-size: 0.82rem; color: var(--marea); font-style: italic; border-left: 2px solid var(--ola); padding-left: 0.8rem; line-height: 1.5; }
 
-.sector-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(58,191,191,0.18); }
+.sector-card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 20px;
+  padding: 2rem;
+  border: 1px solid rgba(58,191,191,0.18);
+  position: relative;
+  overflow: hidden;
+  transition: background 0.25s;
+}
 .sector-card:hover { background: rgba(58,191,191,0.08); }
 .sector-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--ola); }
 .sector-card.orange::before { background: var(--surfista); }
@@ -151,17 +189,131 @@ h1 span { display: block; font-size: 0.55em; letter-spacing: 0.18em; color: rgba
 .card-items li::before { content: ''; position: absolute; left: 0; top: 7px; width: 5px; height: 5px; border-radius: 50%; background: var(--ola); }
 .sector-card.orange .card-items li::before { background: var(--surfista); }
 
-/* ===== PROGRAM STATS ===== */
+.pipe-step { text-align: center; padding: 1.2rem 0.5rem; position: relative; }
+.pipe-step::after { content: '→'; position: absolute; right: -6px; top: 50%; transform: translateY(-50%); color: rgba(58,191,191,0.35); font-size: 1.1rem; }
+.pipe-step:last-child::after { display: none; }
+.pipe-num { width: 44px; height: 44px; border-radius: 50%; background: var(--oceano); border: 2px solid var(--ola); display: flex; align-items: center; justify-content: center; margin: 0 auto 0.8rem; font-family: 'Bebas Neue', sans-serif; font-size: 1rem; color: var(--ola); font-weight: 600; letter-spacing: 0.04em; }
+.pipe-label { font-family: 'Bebas Neue', sans-serif; font-size: 0.85rem; color: var(--oceano); letter-spacing: 0.05em; line-height: 1.3; }
+.pipe-sub { font-size: 0.7rem; color: var(--roca); margin-top: 0.3rem; font-weight: 300; }
+.proceso-cta { text-align: center; margin-top: 1rem; }
+
 .prog-stat { background: rgba(255,255,255,0.05); border: 1px solid rgba(58,191,191,0.2); border-radius: 16px; padding: 1.4rem; text-align: center; }
 .prog-num { font-family: 'Bebas Neue', sans-serif; font-size: 2.2rem; color: var(--ola); letter-spacing: 0.04em; line-height: 1; }
 .prog-label { font-size: 0.8rem; color: rgba(214,245,245,0.5); font-weight: 300; margin-top: 0.3rem; line-height: 1.4; }
 
+/* ===== APP CARD ===== */
+.app-card {
+  background: #fff;
+  border-radius: 24px;
+  padding: 2.2rem;
+  border: 1px solid rgba(58,191,191,0.18);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.app-card:hover { transform: translateY(-4px); box-shadow: 0 20px 50px rgba(11,37,64,0.1); }
+.app-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--ola), var(--marea)); }
+.app-card-header { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.2rem; }
+.app-icon { width: 56px; height: 56px; border-radius: 14px; background: linear-gradient(135deg, var(--oceano), var(--marea)); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: #fff; flex-shrink: 0; }
+.app-meta { flex: 1; }
+.app-name { font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; color: var(--oceano); letter-spacing: 0.05em; line-height: 1.1; }
+.app-version { display: inline-block; font-size: 0.72rem; background: rgba(58,191,191,0.12); color: var(--marea); border-radius: 20px; padding: 2px 10px; margin-top: 4px; font-weight: 400; letter-spacing: 0.02em; }
+.app-desc { font-size: 0.88rem; color: var(--roca); font-weight: 300; line-height: 1.7; margin-bottom: 1.4rem; }
+.app-features { list-style: none; margin-bottom: 1.6rem; display: flex; flex-direction: column; gap: 5px; }
+.app-features li { font-size: 0.82rem; color: var(--roca); font-weight: 300; padding-left: 1.2rem; position: relative; line-height: 1.5; }
+.app-features li::before { content: ''; position: absolute; left: 0; top: 6px; width: 6px; height: 6px; border-radius: 50%; background: var(--ola); }
+
+/* ===== AVISO ÉTICO ===== */
+.aviso-etico {
+  margin: 1.2rem 0 1.4rem 0;
+  background: rgba(244,131,61,0.06);
+  border-left: 4px solid var(--surfista);
+  border-radius: 0 12px 12px 0;
+  padding: 1.2rem 1.4rem;
+}
+.aviso-etico-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+.aviso-etico-icon { font-size: 1.4rem; line-height: 1; }
+.aviso-etico-titulo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.95rem;
+  color: var(--oceano);
+  letter-spacing: 0.04em;
+  margin-bottom: 0.3rem;
+}
+.aviso-etico-texto {
+  font-size: 0.82rem;
+  color: var(--roca);
+  font-weight: 300;
+  line-height: 1.6;
+  margin: 0;
+}
+.aviso-etico-texto strong {
+  color: var(--surfista);
+  font-weight: 400;
+}
+.aviso-etico-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0.6rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.aviso-etico-lista li {
+  font-size: 0.78rem;
+  color: var(--roca);
+  font-weight: 300;
+  padding-left: 1.2rem;
+  position: relative;
+  line-height: 1.5;
+}
+.aviso-etico-lista li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--surfista);
+}
+.aviso-etico-cita {
+  font-size: 0.78rem;
+  color: var(--marea);
+  font-style: italic;
+  font-weight: 300;
+  margin: 0.5rem 0 0 0;
+  padding-left: 0.8rem;
+  border-left: 2px solid var(--ola);
+  line-height: 1.5;
+}
+
+/* ===== BOTONES DESCARGA ===== */
+.download-btns { display: flex; flex-direction: column; gap: 10px; }
+.dl-btn {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 18px; border-radius: 12px; text-decoration: none;
+  font-size: 0.88rem; font-weight: 400; transition: transform 0.18s, box-shadow 0.18s;
+  border: 1.5px solid transparent;
+}
+.dl-btn:hover { transform: translateY(-2px); }
+.dl-btn-windows { background: var(--oceano); color: #fff; }
+.dl-btn-windows:hover { box-shadow: 0 8px 24px rgba(11,37,64,0.3); }
+.dl-btn-linux { background: transparent; border-color: rgba(26,94,143,0.35); color: var(--marea); }
+.dl-btn-linux:hover { background: rgba(26,94,143,0.06); box-shadow: 0 6px 18px rgba(26,94,143,0.12); }
+.dl-btn-manual { background: transparent; border-color: rgba(244,131,61,0.4); color: var(--surfista); }
+.dl-btn-manual:hover { background: rgba(244,131,61,0.08); box-shadow: 0 6px 18px rgba(244,131,61,0.15); }
+.dl-btn-icon { width: 26px; height: 26px; flex-shrink: 0; fill: currentColor; }
+.dl-btn-text { flex: 1; }
+.dl-btn-label { display: block; font-family: 'Bebas Neue', sans-serif; font-size: 1rem; letter-spacing: 0.06em; line-height: 1; }
+.dl-btn-sub { display: block; font-size: 0.72rem; opacity: 0.65; margin-top: 2px; font-weight: 300; }
+.dl-btn-arrow { font-size: 0.8rem; opacity: 0.5; }
+
 /* ===== CONTACTO ===== */
-.contact { padding: 4rem 1.5rem; max-width: 640px; margin: 0 auto; text-align: center; }
-.contact .section-title { color: var(--oceano); }
-.contact-desc { font-size: 1rem; color: var(--roca); font-weight: 300; line-height: 1.7; margin-bottom: 2rem; }
 .contact-email { display: inline-flex; align-items: center; gap: 8px; background: rgba(58,191,191,0.08); border: 1px solid rgba(58,191,191,0.25); border-radius: 50px; padding: 10px 20px; margin-bottom: 2rem; color: var(--oceano); text-decoration: none; transition: background 0.2s, border-color 0.2s; }
-.contact-email:hover { background: rgba(58,191,191,0.15); border-color: var(--ola); }
+.contact-email:hover { background: rgba(58,191,191,0.15); border-color: var(--ola); color: var(--oceano); }
+.contact-email span { font-size: 1rem; }
 .contact-form { display: flex; flex-direction: column; gap: 14px; text-align: left; }
 .contact-form input, .contact-form select, .contact-form textarea { width: 100%; padding: 14px 18px; border: 1.5px solid rgba(58,191,191,0.25); border-radius: 12px; font-size: 0.92rem; font-family: 'DM Sans', sans-serif; color: var(--oceano); background: transparent; transition: border-color 0.2s; }
 .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus { border-color: var(--ola); outline: none; }
@@ -171,85 +323,23 @@ h1 span { display: block; font-size: 0.55em; letter-spacing: 0.18em; color: rgba
 .contact-note { margin-top: 1rem; font-size: 0.8rem; color: var(--roca); font-weight: 300; opacity: 0.7; }
 .contact-note a { color: var(--marea); text-decoration: none; }
 .contact-note a:hover { text-decoration: underline; }
-.vision h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(1.8rem, 4vw, 2.8rem); color: var(--oceano); letter-spacing: 0.05em; margin-bottom: 1.2rem; line-height: 1.15; }
-.vision h2 em { color: var(--ola); font-style: normal; }
-.vision p { color: var(--roca); font-weight: 300; font-size: 1rem; line-height: 1.8; }
-.proceso-cta { text-align: center; margin-top: 1rem; }
-
-/* ===== DESCARGA RESPONSIVE ===== */
-.descargas-wrap { background: var(--espuma); padding: 4rem 1.5rem; }
-.descargas-inner { max-width: 960px; margin: 0 auto; }
-.descargas-wrap .section-label { color: var(--surfista); }
-.descargas-wrap .section-title { color: var(--oceano); }
-.descargas-wrap .section-desc { color: var(--roca); }
-.app-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 2rem; }
-.app-card { background: #fff; border-radius: 24px; padding: 1.8rem; border: 1px solid rgba(58,191,191,0.18); position: relative; overflow: hidden; transition: transform 0.25s, box-shadow 0.25s; }
-.app-card:hover { transform: translateY(-4px); box-shadow: 0 20px 50px rgba(11,37,64,0.1); }
-.app-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--ola), var(--marea)); }
-.app-card-header { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.2rem; flex-wrap: wrap; }
-.app-icon { width: 52px; height: 52px; border-radius: 14px; background: linear-gradient(135deg, var(--oceano), var(--marea)); display: flex; align-items: center; justify-content: center; font-size: 1.6rem; color: #fff; flex-shrink: 0; }
-.app-meta { flex: 1; min-width: 140px; }
-.app-name { font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem; color: var(--oceano); letter-spacing: 0.05em; line-height: 1.1; }
-.app-version { display: inline-block; font-size: 0.7rem; background: rgba(58,191,191,0.12); color: var(--marea); border-radius: 20px; padding: 2px 10px; margin-top: 4px; font-weight: 400; letter-spacing: 0.02em; }
-.app-desc { font-size: 0.88rem; color: var(--roca); font-weight: 300; line-height: 1.7; margin-bottom: 1.2rem; }
-.app-features { list-style: none; margin-bottom: 1.4rem; display: flex; flex-direction: column; gap: 4px; }
-.app-features li { font-size: 0.82rem; color: var(--roca); font-weight: 300; padding-left: 1.2rem; position: relative; line-height: 1.5; }
-.app-features li::before { content: ''; position: absolute; left: 0; top: 6px; width: 6px; height: 6px; border-radius: 50%; background: var(--ola); }
-
-/* ===== AVISO ÉTICO ===== */
-.aviso-etico { margin: 1.2rem 0 1.4rem 0; background: rgba(244,131,61,0.06); border-left: 4px solid var(--surfista); border-radius: 0 12px 12px 0; padding: 1.2rem 1.2rem; }
-.aviso-etico-header { display: flex; align-items: flex-start; gap: 0.8rem; }
-.aviso-etico-icon { font-size: 1.3rem; line-height: 1; }
-.aviso-etico-titulo { font-family: 'Bebas Neue', sans-serif; font-size: 0.9rem; color: var(--oceano); letter-spacing: 0.04em; margin-bottom: 0.2rem; }
-.aviso-etico-texto { font-size: 0.82rem; color: var(--roca); font-weight: 300; line-height: 1.6; margin: 0; }
-.aviso-etico-texto strong { color: var(--surfista); font-weight: 400; }
-.aviso-etico-lista { list-style: none; padding: 0; margin: 0.5rem 0 0 0; display: flex; flex-direction: column; gap: 3px; }
-.aviso-etico-lista li { font-size: 0.76rem; color: var(--roca); font-weight: 300; padding-left: 1.2rem; position: relative; line-height: 1.5; }
-.aviso-etico-lista li::before { content: '•'; position: absolute; left: 0; top: 0; color: var(--surfista); }
-.aviso-etico-cita { font-size: 0.76rem; color: var(--marea); font-style: italic; font-weight: 300; margin: 0.4rem 0 0 0; padding-left: 0.8rem; border-left: 2px solid var(--ola); line-height: 1.5; }
-
-/* ===== BOTONES DE DESCARGA ===== */
-.download-btns { display: flex; flex-direction: column; gap: 10px; }
-.dl-btn {
-  display: flex; align-items: center; gap: 12px;
-  padding: 12px 16px; border-radius: 12px; text-decoration: none;
-  font-size: 0.85rem; font-weight: 400; transition: transform 0.18s, box-shadow 0.18s;
-  border: 1.5px solid transparent;
-  width: 100%;
-}
-.dl-btn:hover { transform: translateY(-2px); }
-.dl-btn-windows { background: var(--oceano); color: #fff; }
-.dl-btn-windows:hover { box-shadow: 0 8px 24px rgba(11,37,64,0.3); }
-.dl-btn-linux { background: transparent; border-color: rgba(26,94,143,0.35); color: var(--marea); }
-.dl-btn-linux:hover { background: rgba(26,94,143,0.06); box-shadow: 0 6px 18px rgba(26,94,143,0.12); }
-.dl-btn-manual { background: transparent; border-color: rgba(244,131,61,0.4); color: var(--surfista); }
-.dl-btn-manual:hover { background: rgba(244,131,61,0.08); box-shadow: 0 6px 18px rgba(244,131,61,0.15); }
-.dl-btn-icon { width: 24px; height: 24px; flex-shrink: 0; fill: currentColor; }
-.dl-btn-text { flex: 1; min-width: 0; }
-.dl-btn-label { display: block; font-family: 'Bebas Neue', sans-serif; font-size: 0.95rem; letter-spacing: 0.06em; line-height: 1; }
-.dl-btn-sub { display: block; font-size: 0.65rem; opacity: 0.65; margin-top: 2px; font-weight: 300; }
-.dl-btn-arrow { font-size: 0.8rem; opacity: 0.5; flex-shrink: 0; }
 
 /* ===== FOOTER ===== */
-footer { background: var(--oceano); padding: 1.5rem 1.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; border-top: 1px solid rgba(58,191,191,0.15); }
+footer { background: var(--oceano); padding: 1.8rem 2.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; border-top: 1px solid rgba(58,191,191,0.15); }
 .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; letter-spacing: 0.1em; color: var(--ola); text-decoration: none; }
 .footer-logo span { color: rgba(255,255,255,0.55); }
-.footer-links { display: flex; gap: 1.2rem; flex-wrap: wrap; }
-.footer-links a { font-size: 0.75rem; color: rgba(214,245,245,0.4); text-decoration: none; transition: color 0.2s; }
+.footer-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+.footer-links a { font-size: 0.8rem; color: rgba(214,245,245,0.4); text-decoration: none; transition: color 0.2s; }
 .footer-links a:hover { color: var(--ola); }
-.footer-copy { font-size: 0.72rem; color: rgba(214,245,245,0.35); font-weight: 300; width: 100%; text-align: center; margin-top: 0.5rem; }
-.footer-social { display: flex; gap: 0.6rem; align-items: center; }
-.footer-social a { display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 50%; border: 1px solid rgba(58,191,191,0.2); color: rgba(214,245,245,0.45); text-decoration: none; transition: border-color 0.2s, color 0.2s, background 0.2s; }
+.footer-copy { font-size: 0.78rem; color: rgba(214,245,245,0.35); font-weight: 300; }
+.footer-social { display: flex; gap: 0.8rem; align-items: center; }
+.footer-social a { display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; border: 1px solid rgba(58,191,191,0.2); color: rgba(214,245,245,0.45); text-decoration: none; transition: border-color 0.2s, color 0.2s, background 0.2s; }
 .footer-social a:hover { border-color: var(--ola); color: var(--ola); background: rgba(58,191,191,0.08); }
-.footer-social svg { width: 15px; height: 15px; fill: currentColor; }
+.footer-social svg { width: 16px; height: 16px; fill: currentColor; }
 
 @keyframes fadeUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
 
-/* ============================================================ */
 /* ===== RESPONSIVE ===== */
-/* ============================================================ */
-
-/* Tablets y móviles grandes */
 @media (max-width: 768px) {
   nav { padding: 0 1rem; }
   .nav-hamburger { display: flex; }
@@ -273,48 +363,40 @@ footer { background: var(--oceano); padding: 1.5rem 1.5rem; display: flex; align
     pointer-events: all;
   }
   .nav-links a { font-size: 0.95rem; padding: 0.3rem 0; }
+
   .hero { min-height: 80vh; padding: 4rem 1rem 5rem; }
   .hero-ctas .btn-primary, .hero-ctas .btn-outline, .hero-ctas .btn-ghost {
     width: 100%;
     max-width: 280px;
     text-align: center;
   }
+
   .met-grid, .sector-grid, .prog-grid { grid-template-columns: 1fr; }
   .pipeline { grid-template-columns: 1fr 1fr; }
   .pipe-step::after { display: none; }
   .app-grid { grid-template-columns: 1fr; }
+
+  .metodologia, .proceso-preview, .vision { padding: 4rem 1.2rem; }
+  .sectores-wrap, .programa { padding: 4rem 1.2rem; }
+  .descargas-wrap { padding: 4rem 1.2rem; }
+  .contact { padding: 4rem 1.2rem; }
   .app-card { padding: 1.5rem; }
-  .descargas-wrap { padding: 3rem 1rem; }
-  .metodologia, .proceso-preview, .vision, .contact { padding: 3rem 1rem; }
-  .sectores-wrap, .programa { padding: 3rem 1rem; }
-  .contact-form input, .contact-form select, .contact-form textarea { font-size: 0.85rem; }
-  footer { flex-direction: column; align-items: flex-start; gap: 0.8rem; }
-  .footer-links { gap: 0.8rem; }
+
+  footer { padding: 1.5rem 1.2rem; flex-direction: column; align-items: flex-start; gap: 0.8rem; }
 }
 
-/* Móviles pequeños */
 @media (max-width: 480px) {
-  .hero-badge { font-size: 0.65rem; padding: 6px 12px; }
-  .logo-hero img { width: 110px; }
   h1 { font-size: clamp(2rem, 10vw, 2.8rem); }
   .hero-sub { font-size: 0.9rem; }
   .btn-primary, .btn-outline, .btn-ghost { font-size: 0.9rem; padding: 12px 24px; }
-  .section-title { font-size: clamp(1.5rem, 6vw, 2rem); }
   .pipeline { grid-template-columns: 1fr 1fr; gap: 5px; }
   .pipe-step { padding: 0.8rem 0.3rem; }
   .pipe-num { width: 36px; height: 36px; font-size: 0.85rem; }
   .pipe-label { font-size: 0.75rem; }
   .pipe-sub { font-size: 0.6rem; }
-  .met-card, .sector-card { padding: 1.2rem; }
-  .dl-btn { padding: 10px 12px; font-size: 0.8rem; gap: 8px; }
-  .dl-btn-icon { width: 20px; height: 20px; }
-  .dl-btn-label { font-size: 0.85rem; }
-  .dl-btn-sub { font-size: 0.6rem; }
   .app-card-header { flex-direction: column; align-items: center; text-align: center; }
-  .app-meta { min-width: auto; text-align: center; }
   .aviso-etico { padding: 1rem; }
   .aviso-etico-header { flex-direction: column; align-items: center; text-align: center; }
-  .aviso-etico-cita { text-align: center; }
 }
 </style>
 </head>
@@ -537,23 +619,23 @@ footer { background: var(--oceano); padding: 1.5rem 1.5rem; display: flex; align
           </a>
         </div>
 
-        <div style="margin-top: 1.4rem; background: var(--espuma); border-radius: 14px; padding: 1rem 1.2rem; border: 1px solid rgba(58,191,191,0.15);">
-          <p style="font-family:'Bebas Neue',sans-serif; font-size:0.9rem; color:var(--oceano); letter-spacing:0.06em; margin-bottom:0.6rem;">¿Cómo instalar?</p>
-          <ol style="list-style:none; display:flex; flex-direction:column; gap:5px; padding:0;">
-            <li style="display:flex; gap:10px; align-items:flex-start; font-size:0.8rem; color:var(--roca); font-weight:300; line-height:1.5;">
-              <span style="min-width:20px; height:20px; border-radius:50%; background:var(--oceano); color:#fff; display:flex; align-items:center; justify-content:center; font-family:'Bebas Neue',sans-serif; font-size:0.7rem;">1</span>
-              Descarga el <strong style="font-weight:400; color:var(--marea);">.zip</strong> para tu sistema.
+        <div style="margin-top: 1.6rem; background: var(--espuma); border-radius: 14px; padding: 1.2rem 1.4rem; border: 1px solid rgba(58,191,191,0.15);">
+          <p style="font-family:'Bebas Neue',sans-serif; font-size:0.95rem; color:var(--oceano); letter-spacing:0.06em; margin-bottom:0.7rem;">¿Cómo instalar?</p>
+          <ol style="list-style:none; display:flex; flex-direction:column; gap:6px; padding:0;">
+            <li style="display:flex; gap:10px; align-items:flex-start; font-size:0.82rem; color:var(--roca); font-weight:300; line-height:1.5;">
+              <span style="min-width:22px; height:22px; border-radius:50%; background:var(--oceano); color:#fff; display:flex; align-items:center; justify-content:center; font-family:'Bebas Neue',sans-serif; font-size:0.75rem;">1</span>
+              Descarga el archivo <strong style="font-weight:400; color:var(--marea);">.zip</strong> para tu sistema operativo.
             </li>
-            <li style="display:flex; gap:10px; align-items:flex-start; font-size:0.8rem; color:var(--roca); font-weight:300; line-height:1.5;">
-              <span style="min-width:20px; height:20px; border-radius:50%; background:var(--oceano); color:#fff; display:flex; align-items:center; justify-content:center; font-family:'Bebas Neue',sans-serif; font-size:0.7rem;">2</span>
-              Descomprime el archivo.
+            <li style="display:flex; gap:10px; align-items:flex-start; font-size:0.82rem; color:var(--roca); font-weight:300; line-height:1.5;">
+              <span style="min-width:22px; height:22px; border-radius:50%; background:var(--oceano); color:#fff; display:flex; align-items:center; justify-content:center; font-family:'Bebas Neue',sans-serif; font-size:0.75rem;">2</span>
+              Descomprime el archivo (clic derecho → <em>Extraer aquí</em> o similar).
             </li>
-            <li style="display:flex; gap:10px; align-items:flex-start; font-size:0.8rem; color:var(--roca); font-weight:300; line-height:1.5;">
-              <span style="min-width:20px; height:20px; border-radius:50%; background:var(--oceano); color:#fff; display:flex; align-items:center; justify-content:center; font-family:'Bebas Neue',sans-serif; font-size:0.7rem;">3</span>
-              Ejecuta <strong style="font-weight:400; color:var(--marea);">DownloadVideoWin.exe</strong> (Windows) o <strong style="font-weight:400; color:var(--marea);">./Descargador_Lin64</strong> (Linux).
+            <li style="display:flex; gap:10px; align-items:flex-start; font-size:0.82rem; color:var(--roca); font-weight:300; line-height:1.5;">
+              <span style="min-width:22px; height:22px; border-radius:50%; background:var(--oceano); color:#fff; display:flex; align-items:center; justify-content:center; font-family:'Bebas Neue',sans-serif; font-size:0.75rem;">3</span>
+              Abre la carpeta y ejecuta <strong style="font-weight:400; color:var(--marea);">DownloadVideoWin.exe</strong> en Windows, o <strong style="font-weight:400; color:var(--marea);">./Descargador_Lin64</strong> en Linux.
             </li>
           </ol>
-          <p style="font-size:0.7rem; color:var(--roca); opacity:0.55; margin-top:0.6rem; font-weight:300;">No requiere instalación. ¿Dudas? Consulta el manual.</p>
+          <p style="font-size:0.76rem; color:var(--roca); opacity:0.55; margin-top:0.8rem; font-weight:300;">No se requiere instalar ningún programa adicional. ¿Tienes dudas? Consulta el manual de usuario.</p>
         </div>
       </div>
     </div>
@@ -579,10 +661,10 @@ footer { background: var(--oceano); padding: 1.5rem 1.5rem; display: flex; align
     <textarea name="mensaje" placeholder="Cuéntanos más sobre lo que necesitas..." required></textarea>
     <button type="submit" id="submitBtn">Enviar mensaje</button>
   </form>
-  <div id="formSuccess" style="display:none; margin-top:2rem; background:rgba(58,191,191,0.1); border:1px solid rgba(58,191,191,0.3); border-radius:16px; padding:1.5rem; text-align:center;">
+  <div id="formSuccess" style="display:none; margin-top:2rem; background:rgba(58,191,191,0.1); border:1px solid rgba(58,191,191,0.3); border-radius:16px; padding:2rem; text-align:center;">
     <div style="font-size:2rem; margin-bottom:0.8rem;">✓</div>
-    <div style="font-family:'Bebas Neue',sans-serif; font-size:1.3rem; color:var(--oceano); letter-spacing:0.05em; margin-bottom:0.4rem;">Mensaje recibido</div>
-    <p style="font-size:0.85rem; font-weight:300; color:var(--roca); line-height:1.7;">Gracias por escribirnos. Te responderemos a la brevedad.</p>
+    <div style="font-family:'Bebas Neue',sans-serif; font-size:1.5rem; color:var(--oceano); letter-spacing:0.05em; margin-bottom:0.5rem;">Mensaje recibido</div>
+    <p style="font-size:0.9rem; font-weight:300; color:var(--roca); line-height:1.7;">Gracias por escribirnos. Te responderemos a la brevedad en el correo que nos indicaste.</p>
   </div>
   <p class="contact-note">También puedes escribirnos directamente a <a href="mailto:proyectooladigital@gmail.com">proyectooladigital@gmail.com</a></p>
 </section>
@@ -626,7 +708,6 @@ hamburger.addEventListener('click', function() {
   navLinks.classList.toggle('open');
 });
 
-// Cerrar menú al hacer clic en un enlace
 document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', () => {
     hamburger.classList.remove('active');
@@ -634,7 +715,6 @@ document.querySelectorAll('.nav-links a').forEach(link => {
   });
 });
 
-// Cerrar menú al hacer clic fuera
 document.addEventListener('click', function(e) {
   if (!e.target.closest('nav')) {
     hamburger.classList.remove('active');
