@@ -310,6 +310,26 @@ h1 span { display: block; font-size: 0.55em; letter-spacing: 0.18em; color: rgba
 .dl-btn-sub { display: block; font-size: 0.72rem; opacity: 0.65; margin-top: 2px; font-weight: 300; }
 .dl-btn-arrow { font-size: 0.8rem; opacity: 0.5; }
 
+/* ===== NUEVOS BOTONES BETA ===== */
+.dl-btn-beta {
+  background: linear-gradient(135deg, #2a2a72, #1a1a4e);
+  color: #fff;
+  border: 1.5px solid rgba(255, 200, 0, 0.4);
+}
+.dl-btn-beta:hover {
+  box-shadow: 0 8px 24px rgba(255, 200, 0, 0.25);
+  background: linear-gradient(135deg, #3a3a92, #2a2a6e);
+}
+.dl-btn-beta-manual {
+  background: transparent;
+  border-color: rgba(255, 200, 0, 0.4);
+  color: #b8860b;
+}
+.dl-btn-beta-manual:hover {
+  background: rgba(255, 200, 0, 0.08);
+  box-shadow: 0 6px 18px rgba(255, 200, 0, 0.15);
+}
+
 /* ===== CONTACTO ===== */
 .contact-email { display: inline-flex; align-items: center; gap: 8px; background: rgba(58,191,191,0.08); border: 1px solid rgba(58,191,191,0.25); border-radius: 50px; padding: 10px 20px; margin-bottom: 2rem; color: var(--oceano); text-decoration: none; transition: background 0.2s, border-color 0.2s; }
 .contact-email:hover { background: rgba(58,191,191,0.15); border-color: var(--ola); color: var(--oceano); }
@@ -614,6 +634,31 @@ footer { background: var(--oceano); padding: 1.8rem 2.5rem; display: flex; align
             <span class="dl-btn-text">
               <span class="dl-btn-label">Manual de usuario</span>
               <span class="dl-btn-sub">Descargar .pdf · Guía de uso completa</span>
+            </span>
+            <span class="dl-btn-arrow">↓</span>
+          </a>
+
+          <!-- NUEVOS BOTONES: BETA v2.1 -->
+          <a href="https://github.com/proyectooladigital/descargador-gui-86x-WINDOWS/releases/tag/v2.1"
+             class="dl-btn dl-btn-beta" target="_blank" rel="noopener">
+            <svg class="dl-btn-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+            </svg>
+            <span class="dl-btn-text">
+              <span class="dl-btn-label">Beta v2.1 · Playlists</span>
+              <span class="dl-btn-sub">Versión de evaluación · Descarga listas de reproducción</span>
+            </span>
+            <span class="dl-btn-arrow">↓</span>
+          </a>
+
+          <a href="https://github.com/proyectooladigital/descargador-gui-86x-WINDOWS/releases/download/v2.1/Manual_Descargador_POD_v2.1.pdf"
+             class="dl-btn dl-btn-beta-manual" target="_blank" rel="noopener">
+            <svg class="dl-btn-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14 2H6c-1.1 0-1.99.9-1.99 2v16c0 1.1.89 2 1.99 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+            </svg>
+            <span class="dl-btn-text">
+              <span class="dl-btn-label">Manual v2.1 · Playlists</span>
+              <span class="dl-btn-sub">Descargar .pdf · Nueva habilidad: descarga de listas</span>
             </span>
             <span class="dl-btn-arrow">↓</span>
           </a>
